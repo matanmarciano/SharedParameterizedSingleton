@@ -17,12 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // This commented code will fix the issue but what if tomorrow will come another developer that add
-        // own activity and declare it to be the first activity? this developer dont know about
-        // RestClient and the need to call setModelService at the begin of first activity.
-
-        //RestClient.getInstance().setModelService(new ModelService());
-
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setViewModel(new MainViewModel());
 
